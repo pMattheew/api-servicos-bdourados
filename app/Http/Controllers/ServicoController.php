@@ -19,7 +19,6 @@ class ServicoController extends Controller
         $request->validate([
             'nome' => 'required',
             'valor' => 'required',
-            'descricao' => 'required',
         ]); 
 
         // Salvar no BD
