@@ -21,4 +21,18 @@ class ServicoController extends Controller
 
         return new ServicoResource($servicos);
     }
+    
+    public function update(StoreServicoRequest $request, Servico $servico)
+    {
+        $servico->update($request->all());
+        
+        return new ServicoResource($servico);
+    }
+    
+    public function destroy(Servico $servico)
+    {
+        $servico->delete();
+
+        return response(null, 204);
+    }
 }
