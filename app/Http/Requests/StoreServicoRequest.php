@@ -25,7 +25,7 @@ class StoreServicoRequest extends FormRequest
     {
         return [
             'nome' => ['required'],
-            'valor' => ['required']
+            'preco' => ['required']
         ];
     }
 }
