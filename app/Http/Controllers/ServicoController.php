@@ -12,7 +12,7 @@ class ServicoController extends Controller
     public function index()
     {
         $servicos = Servico::all();
-        return ServicoResource::collection($servicos);
+        return response()->json($servicos);
     }
 
     public function store(StoreServicoRequest $request)
